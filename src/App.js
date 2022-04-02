@@ -1,13 +1,15 @@
-// import logo from './logo.svg';
 import React from 'react';
-import Header from './components/header';
+import Header from './component/Card/Header/header';
 import './App.css';
+import ActionAreaCard from './component/Card/card';
 
 function App() {
   return (
     <div className="App">
       <Header/>
+      <ActionAreaCard/>
     </div>
+   
   );
 }
 
