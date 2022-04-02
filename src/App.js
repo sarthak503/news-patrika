@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './component/Card/Header/header';
+import Header from './component/Header/header';
 import './App.css';
 import ActionAreaCard from './component/Card/card';
 
