@@ -5,15 +5,11 @@ import image from "../images/Logo.jpg";
 function Header({ updateFilter }) {
   return (
     <div className="header">
-      <div>
-        <img className="Logo" src={image} />
-      </div>
-      <div className="search-bar">
-        <input className="input" id="search"></input>
-        <button className="btn" onClick={updateFilter}>
-          Filter
-        </button>
-      </div>
+      <img className="Logo" src={image} />
+      <input className="input" id="search"></input>
+      <button className="btn" onClick={updateFilter}>
+        Search
+      </button>
     </div>
   );
 }
