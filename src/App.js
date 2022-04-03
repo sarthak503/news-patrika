@@ -1,25 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-import Header from './component/Header/header';
-import './App.css';
-import ActionAreaCard from './component/Card/card';
-
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <ActionAreaCard/>
-    </div>
-   
-=======
 import "./App.css";
 
 import { useEffect, useState } from "react";
+import Header from "./component/Header";
 import Display from "./component/Display";
 import Footer from "./component/Footer";
 function App() {
   const [filter, setFilter] = useState({
-    category: "bitcoin",
+    category: "keyword",
   });
   const [news, setNews] = useState([]);
 
@@ -28,8 +15,11 @@ function App() {
     setFilter({
       category: val,
     });
+    console.log(val);
+    fetchData();
   };
   const fetchData = () => {
+    console.log("cscsd");
     fetch(endpoint + filter.category)
       .then((response) => response.json())
       .then((data) => {
@@ -46,10 +36,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header updateFilter={updateFilter} />
       {news && <Display news={news} />}
       <Footer />
     </div>
->>>>>>> ba22029 (added footer and display file)
   );
 }
 
