@@ -1,10 +1,15 @@
-
+import React from 'react';
+import Header from './component/Header/header';
 import './App.css';
-import ActionAreaCard from './component/card';
+import ActionAreaCard from './component/Card/card';
 
 function App() {
   return (
-   <ActionAreaCard/>
+    <div className="App">
+      <Header/>
+      <ActionAreaCard/>
+    </div>
+   
   );
 }
 
