@@ -9,7 +9,6 @@ import { CardActionArea } from "@mui/material";
 import "./Card.css";
 
 const NewsCard = ({ Item }) => {
-  console.log("xsasa", Item);
   return (
     <div className="cardStyle">
       <Card sx={{ maxWidth: 345 }}>
