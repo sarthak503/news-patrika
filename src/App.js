@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Header from './component/Header/header';
 import './App.css';
@@ -10,6 +11,17 @@ function App() {
       <ActionAreaCard/>
     </div>
    
+=======
+import "./App.css";
+import NewsCard from "./component/card";
+import Footer from "./component/footer";
+function App() {
+  return (
+    <div>
+      <NewsCard />
+      <Footer />
+    </div>
+>>>>>>> ba22029 (added footer and display file)
   );
 }
 
