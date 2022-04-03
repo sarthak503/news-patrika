@@ -1,0 +1,6 @@
+.cardStyle{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}

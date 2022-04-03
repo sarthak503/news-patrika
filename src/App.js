@@ -13,12 +13,40 @@ function App() {
    
 =======
 import "./App.css";
-import NewsCard from "./component/card";
-import Footer from "./component/footer";
+
+import { useEffect, useState } from "react";
+import Display from "./component/Display";
+import Footer from "./component/Footer";
 function App() {
+  const [filter, setFilter] = useState({
+    category: "bitcoin",
+  });
+  const [news, setNews] = useState([]);
+
+  const updateFilter = () => {
+    const val = document.getElementById("search").value;
+    setFilter({
+      category: val,
+    });
+  };
+  const fetchData = () => {
+    fetch(endpoint + filter.category)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // displayNews(data);
+        setNews(data.articles);
+      });
+  };
+  const endpoint =
+    "https://newsapi.org/v2/everything?apiKey=894c5d501fcc4663bf838ad0744060ab&q=";
+  useEffect(() => {
+    fetchData();
+  }, [filter]);
+
   return (
-    <div>
-      <NewsCard />
+    <div className="App">
+      {news && <Display news={news} />}
       <Footer />
     </div>
 >>>>>>> ba22029 (added footer and display file)
