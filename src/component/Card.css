@@ -1,8 +1,11 @@
+body{
+    background-color: rgb(255, 244, 244);
+}
 .cardStyle{
     margin: 5%;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }

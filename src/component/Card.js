@@ -11,28 +11,59 @@ import "./Card.css";
 const NewsCard = ({ Item }) => {
   return (
     <div className="cardStyle">
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 350, height: 380 }}>
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image={Item.urlToImage}
+            image={Item.media}
             //alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {Item.title}
+            <Typography
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItem: "flex-end",
+                marginTop: "2%",
+                fontSize: 18,
+                fontWeight: "bold",
+              }}
+              gutterBottom
+              variant="h5"
+              component="div"
+            >
+              {Item.title.substr(0, 70)}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {Item.description}
+            <Typography
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItem: "flex-end",
+                marginTop: "5%",
+                fontSize: 15,
+                alignItems: "center",
+              }}
+              variant="body2"
+              color="text.secondary"
+            >
+              {Item.summary.substr(0, 110)}
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button href={Item.url} size="small">
-              Learn More
-            </Button>
-          </CardActions>
         </CardActionArea>
+        <Button
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItem: "flex-end",
+            marginTop: "2%",
+          }}
+          href={Item.link}
+          size="small"
+        >
+          Learn More
+        </Button>
       </Card>
     </div>
   );

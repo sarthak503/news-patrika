@@ -6,7 +6,11 @@ function Header({ updateFilter }) {
   return (
     <div className="header">
       <img className="Logo" src={image} />
-      <input className="input" id="search"></input>
+      <input
+        className="input"
+        placeholder="Enter the topic for news"
+        id="search"
+      ></input>
       <button className="btn" onClick={updateFilter}>
         Search
       </button>
